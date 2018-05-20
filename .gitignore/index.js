@@ -54,7 +54,7 @@ bot.on('message' , message => {
                 message.channel.send('OUESH #45°', {tts: true});
                 break;
             case '>Trisard':
-                message.channel.send('10 km de bite !', {tts: true});
+                message.channel.send('km de bite !', {tts: true});
                 break;
             case '>roll':
                 let rdm = Math.floor(Math.random() * Math.floor(101));
