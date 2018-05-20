@@ -23,6 +23,7 @@ bot.on('message' , message => {
 >Anemoz
 >Leo
 >Honorina
+>Trisard
 >Gay [@mention]
 >play [sac, tuturu]
 `
@@ -51,6 +52,9 @@ bot.on('message' , message => {
                 break;
             case '>Honorina':
                 message.channel.send('OUESH #45°', {tts: true});
+                break;
+            case '>Trisard':
+                message.channel.send('10 km de bite !', {tts: true});
                 break;
             case '>roll':
                 let rdm = Math.floor(Math.random() * Math.floor(101));
@@ -114,6 +118,7 @@ bot.on('message' , message => {
                                 break;
                             default:
                                 message.channel.send('son invalide');
+                                message.member.voiceChannel.leave();
                         }
                     }).catch(console.log);
                }
