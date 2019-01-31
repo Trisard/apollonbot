@@ -130,4 +130,12 @@ bot.on('message' , message => {
     }
 });
 
+bot.on('message' , message => {
+    if(message.content[0] == 'd' && message.content[1] == 'i') {
+        if(message.content.length > 2){
+            message.channel.send(message.content.substr(2));
+        }
+    }
+});
+
 bot.login(process.env.TOKEN); //TOKEN
