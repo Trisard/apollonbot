@@ -131,9 +131,16 @@ bot.on('message' , message => {
 });
 
 bot.on('message' , message => {
-    if(message.content[0] == 'd' && message.content[1] == 'i') {
-        if(message.content.length > 2){
-            message.channel.send(message.content.substr(2));
+    if(message.author.username != 'Apollon'){
+        let splitMessage = message.content.split(" ");
+        for(var i = 0; i<splitMessage.length; i++){
+            if(splitMessage[i].length > 3){
+                if(splitMessage[i][0].toLowerCase() === 'd') {
+                    if(splitMessage[i][1].toLowerCase() === 'i' || splitMessage[i][1].toLowerCase() === 'y'){
+                        message.channel.send(splitMessage[i].substr(2));
+                    }
+                }
+            }
         }
     }
 });
